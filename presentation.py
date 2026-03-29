@@ -76,7 +76,7 @@ def run_presentation():
                     annotations) - 1
                 if 0 <= annotationNumber < len(annotations): annotations[annotationNumber].append(indexFinger)
                 cv2.circle(pdf_img_resized, indexFinger, 8, (255, 0, 0), cv2.FILLED)
-            elif fingers == [0, 1, 1, 1, 1] and not buttonPressed:
+            elif fingers == [0, 1, 1, 1, 0] and not buttonPressed:
                 if annotations: annotations.pop(-1)
                 annotationNumber = len(annotations) - 1;
                 annotationStart, buttonPressed = False, True
